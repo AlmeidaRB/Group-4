@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Alumni Application</title>
+  <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
+  <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css'/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+  <link href="/assets/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+  <link rel='stylesheet' href='assets/style.css'/>
+
+  <script type='text/template' id='alumniTmpl'>
+
+    <li>
+    <p><%= first_name%> <%= last_name%></p>
+    </li>
+    <li>
+    <p><%= bio %></p>
+    </li>
+
+  </script>
+
+</head>
+<body>
+  <section>
+
+  </section>
+
+  <script src='bower_components/jquery/dist/jquery.js'></script>
+  <script src='bower_components/underscore/underscore.js'></script>
+  <script src='bower_components/backbone/backbone.js'></script>
+  <script src="assets/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+
+  <script src='assets/models.js'></script>
+  <script src='assets/collections.js'></script>
+  <script src='assets/views.js'></script>
+  <script src='assets/main.js'></script>
+</body>
+</html>
