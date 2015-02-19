@@ -1,0 +1,25 @@
+- @graduates.each do |grad|
+  = grad.first_name
+  %br
+  = grad.last_name
+  %br
+  = grad.current_city
+  %br
+  = grad.current_state
+  %br
+  = grad.grad_city
+  %br
+  = grad.grad_state
+  %br
+  = grad.grad_date
+  %br
+  = grad.email
+  %br
+  = grad.bio
+  %br
+  = image_tag(grad.photo)
+  %br
+  = link_to "Show", graduate_path(grad)
+  %br
+  %br
+  %br
