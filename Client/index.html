@@ -11,6 +11,9 @@
   <link href="/assets/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
   <link rel='stylesheet' href='assets/style.css'/>
 
+<!--GRADUATE TEMPLATE-->
+
+
   <script type='text/template' id='alumniTmpl'>
 
     <li>
@@ -27,6 +30,31 @@
     <li>
     <p><%= bio %></p>
     </li>
+
+  </script>
+
+<!--EMPLOYER TEMPLATE-->
+
+  <script type='text/template' id='employerTmpl'>
+
+    <li>
+    <img class='employerPhoto' src=<%= photo %> alt='Image could not be found'>
+    <h2 class='employerName'><%= name%></h2>
+      <ul>
+        <li><%= industry%></li>
+        <li><%= location%></li>
+      </ul>
+    </li>
+    <li>
+      <h2><%= date_founded%> <%= size%></h2>
+      <p><%= bio%></p>
+    </li>
+
+    <button class="btn btn-success">Portfolio</button>
+    <button class="btn btn-primary">Contact</button>
+
+
+<!--name, photo, bio, industry, date_founded, email, size, contact email, location-->
 
   </script>
 
