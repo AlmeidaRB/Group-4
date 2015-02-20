@@ -11,7 +11,6 @@ task create_graduates: :environment do
       grad_date: Faker::Date.backward(150),
       email: Faker::Internet.email,
       photo: [
-          "http://placekitten.com/100/100",
           "http://fillmurray.com/100/100",
           "http://placecage.com/100/100",
           "http://stevensegallery.com/100/100"

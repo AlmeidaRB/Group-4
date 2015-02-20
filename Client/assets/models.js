@@ -1,3 +1,5 @@
+//ALUMNI MODEL
+
 var AlumniModel = Backbone.Model.extend({
   urlRoot: 'http://localhost:9000/graduates.json',
   defaults: function () {
@@ -71,5 +73,26 @@ var AlumniModel = Backbone.Model.extend({
   },
   initialize: function () {
     console.log('AlumniModel initialized');
+  }
+});
+
+//EMPLOYER MODEL
+
+var EmployerModel = Backbone.Model.extend({
+  urlRoot: 'http://localhost:9000/employers.json',
+  defaults: function () {
+    return {
+      id:0,
+      photo:'',
+      name:'',
+      industry:'',
+      location:'',
+      date_founded:'',
+      size:'',
+      bio:''
+    };
+  },
+  initialize: function () {
+    console.log('EmployerModel initialized');
   }
 });

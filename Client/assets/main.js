@@ -7,6 +7,16 @@ $(function () {
      var collectionView = new CollectionView({collection: alumniCollection});
      console.log(collectionView);
    });
+
+//EMPLOYER COLLECTION
+
+   var employerCollection = new EmployerCollection();
+
+    employerCollection.fetch().then(function () {
+      var collectionView2 = new CollectionView2({collection: employerCollection});
+      console.log(collectionView2);
+    });
+
 });
 
 //basic stuff
