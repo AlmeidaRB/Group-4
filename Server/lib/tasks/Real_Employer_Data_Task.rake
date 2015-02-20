@@ -5,7 +5,7 @@ task create_employers: :environment do
       photo: 'http://www.mitcio.com/sites/default/files/imagecache/gold_sponsor/benefitfocus.jpg',
       bio: 'Benefitfocus is a leading provider of benefits technology. More than 23 million consumers manage all types of benefits in the Benefitfocus Cloud. By delivering technology that integrates all benefits in one place, Benefitfocus provides a better way to engage consumers, educate employees and simplify benefit enrollment and management.',
       industry: 'Software Provider',
-      size: '1200',
+      size: '1,200',
       date_founded: '1998',
       email: 'hr@benefitfocus.com',
       location: 'Charleston, SC'
@@ -61,43 +61,44 @@ task create_employers: :environment do
       location: 'Charleston, SC'
     })
     Employer.create!({
-      name: 'BenefitFocus',
-      photo: 'http://az274887.vo.msecnd.net/images/directory/71394_logo.gif',
-      bio: 'Benefitfocus is a leading provider of benefits technology. More than 23 million consumers manage all types of benefits in the Benefitfocus Cloud. By delivering technology that integrates all benefits in one place, Benefitfocus provides a better way to engage consumers, educate employees and simplify benefit enrollment and management.',
+      name: 'BoomTown!',
+      photo: 'http://geekestateblog.com/wp-content/uploads/2014/09/boomtown-logo_large.jpg',
+      bio: 'The top real estate brokerages trust us to help them close more deals and grow their business. They love helping people find their way home and we love helping them do it. Whether you’re overloaded trying to do it all on your own, or trying to find a way to connect multiple teams and offices, BoomTown has the software and services to solve it. 
+        With one system you’re covered from first click to closing. We attract leads to your site and help you get to know them. Automated marketing tools make building relationships simple and predictive intelligence gives you insight you can act on. We take the guesswork out of managing your team and put data in its place: at your fingertips. We’re more than software and data though. We’re here at every step with proven strategies and support, so you can work on your business instead of in it.',
       industry: 'Software Provider',
-      size: '1200',
-      date_founded: '1998',
-      email: 'hr@benefitfocus.com',
+      size: '150',
+      date_founded: '2006',
+      email: 'hr@boomtown.com',
       location: 'Charleston, SC'
     })
     Employer.create!({
-      name: 'BenefitFocus',
-      photo: 'http://az274887.vo.msecnd.net/images/directory/71394_logo.gif',
-      bio: 'Benefitfocus is a leading provider of benefits technology. More than 23 million consumers manage all types of benefits in the Benefitfocus Cloud. By delivering technology that integrates all benefits in one place, Benefitfocus provides a better way to engage consumers, educate employees and simplify benefit enrollment and management.',
+      name: 'Catalytics Data Science',
+      photo: 'http://www.catalyticds.com/img/catalyticds_logo.png',
+      bio: 'Catalytic Data Science develops cloud solutions that enable researchers to utilize biomedical information that is otherwise locked in vast repositories of "read only" scientific publications. Our mission is to make the lives of scientists better and more productive by developing tools that accelerate their research and development activities and speed innovation.',
       industry: 'Software Provider',
-      size: '1200',
-      date_founded: '1998',
-      email: 'hr@benefitfocus.com',
+      size: '85',
+      date_founded: '2008',
+      email: 'hr@cds.com',
       location: 'Charleston, SC'
     })
     Employer.create!({
-      name: 'BenefitFocus',
-      photo: 'http://az274887.vo.msecnd.net/images/directory/71394_logo.gif',
-      bio: 'Benefitfocus is a leading provider of benefits technology. More than 23 million consumers manage all types of benefits in the Benefitfocus Cloud. By delivering technology that integrates all benefits in one place, Benefitfocus provides a better way to engage consumers, educate employees and simplify benefit enrollment and management.',
+      name: 'PhishLabs',
+      photo: 'https://pbs.twimg.com/profile_images/1170138938/PL_Logo_Graphic_400x400.PNG',
+      bio: 'PhishLabs is the leading provider of cybercrime protection and intelligence services that fight back against online threats and reduce the risk posed by phishing, malware, distributed denial of service (DDoS) and other cyber attacks.',
       industry: 'Software Provider',
-      size: '1200',
-      date_founded: '1998',
-      email: 'hr@benefitfocus.com',
+      size: '220',
+      date_founded: '2004',
+      email: 'hr@phishlabs.com',
       location: 'Charleston, SC'
     })
     Employer.create!({
-      name: 'BenefitFocus',
-      photo: 'http://az274887.vo.msecnd.net/images/directory/71394_logo.gif',
-      bio: 'Benefitfocus is a leading provider of benefits technology. More than 23 million consumers manage all types of benefits in the Benefitfocus Cloud. By delivering technology that integrates all benefits in one place, Benefitfocus provides a better way to engage consumers, educate employees and simplify benefit enrollment and management.',
+      name: 'Blackbaud',
+      photo: 'http://halsey.cofc.edu/wp-content/files_mf/cache/th_786a15f2a09f58bf421d59fa1c1c028e_screenshot20130920at2.43.03pm.png',
+      bio: 'Blackbaud Inc. is a supplier of software and services specifically designed for nonprofit organizations. Its products focus on fundraising, website management, CRM, analytics, financial management, ticketing, and education administration.',
       industry: 'Software Provider',
-      size: '1200',
-      date_founded: '1998',
-      email: 'hr@benefitfocus.com',
+      size: '2,600',
+      date_founded: '1981',
+      email: 'hr@blackbaud.com',
       location: 'Charleston, SC'
     })  
 end
