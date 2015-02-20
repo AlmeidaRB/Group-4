@@ -33,19 +33,20 @@ var methods = {
     //send
     $('#searchForm').on('submit', function (e) {
       e.preventDefault();
-    //   $.ajax({
-    //   url:,
-    //   type:'GET',
-    //   data:{
-    //
-    //   },
-    //   success:function(){
-    //     console.log('ajax success');
-    //   },
-    //   error:function(error){
-    //     console.log('ajax error');
-    //   }
-    // });
+      $.ajax({
+        url:'http://10.0.10.95:9000/graduates/search_graduates.json',
+        type:'GET',
+        data:{
+          position: $('#gradPosQuery').val(),
+          location: $('#gradLocQuery').val()
+        },
+        success:function(){
+          console.log('ajax success');
+        },
+        error:function(error){
+          console.log('ajax error');
+        }
+      });
       console.log($('#gradPosQuery').val());
       console.log($('#gradLocQuery').val());
     });
