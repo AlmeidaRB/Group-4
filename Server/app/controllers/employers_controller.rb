@@ -1,4 +1,5 @@
-class EmployerController < ApplicationController
+class EmployersController < ApplicationController
+  
   def index
     @employers = Employer.all
     respond_to do |format|
@@ -52,4 +53,5 @@ class EmployerController < ApplicationController
       :email,
       )
   end
+
 end

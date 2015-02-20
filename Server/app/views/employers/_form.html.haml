@@ -1,0 +1,33 @@
+%h3 Employer form
+  
+= form_for [@employer] do |f| 
+  = f.label :name
+  = f.text_field :name
+  %br
+  = f.label :desired_position
+  = f.text_field :desired_position
+  %br
+  = f.label :location
+  = f.text_field :location
+  %br  
+  = f.label :photo
+  = f.text_field :photo
+  %br         
+  = f.label :bio
+  = f.text_area :bio
+  %br
+  = f.label :industry
+  = f.text_field :industry
+  %br
+  = f.label :date_founded
+  = f.date_field :date_founded
+  %br      
+  = f.label :email
+  = f.text_field :email
+  %br
+  = f.label :size
+  = f.text_field :size
+  %br
+  = f.submit "Submit"
+  %br
+  = link_to "Cancel", employers_path

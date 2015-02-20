@@ -1,0 +1,36 @@
+%h3 Graduate form
+  
+= form_for [@graduate] do |f| 
+  = f.label :name
+  = f.text_field :name
+  %br
+  = f.label :desired_position
+  = f.text_field :desired_position  
+  = f.label :photo
+  = f.text_field :photo
+  %br         
+  = f.label :bio
+  = f.text_area :bio
+  %br      
+  = f.label :email
+  = f.text_field :email
+  %br
+  = f.label :current_city
+  = f.text_field :current_city
+  %br      
+  = f.label :current_state
+  = f.select :current_state,options_for_select( Graduate::STATE_OPTIONS, f.object.state), include_blank: "---select---" |
+  %br
+  = f.label :grad_city
+  = f.text_field :grad_city
+  %br      
+  = f.label :grad_state
+  = f.select :grad_state,options_for_select( Graduate::STATE_OPTIONS, f.object.state), include_blank: "---select---" |
+  %br
+  = f.label :grad_date
+  = f.date_field :grad_date
+  %br
+  = f.submit "Submit"
+  %br
+  = link_to "Cancel", graduates_path
+  
