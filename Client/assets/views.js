@@ -37,7 +37,7 @@ var CollectionView = Backbone.View.extend({
   },
   addAll: function () {
     _.each(this.collection.models, this.addOne, this);
-    $('.bxslider').bxSlider();
+    
   }
 });
 
