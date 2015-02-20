@@ -23,7 +23,20 @@ var methods = {
     //send
     $('#searchForm').on('submit', function (e) {
       e.preventDefault();
-      console.log($('input[name="usernameInput"]').val());
+    //   $.ajax({
+    //   url:,
+    //   type:'GET',
+    //   data:{
+    //
+    //   },
+    //   success:function(){
+    //     console.log('ajax success');
+    //   },
+    //   error:function(error){
+    //     console.log('ajax error');
+    //   }
+    // });
+      console.log($('#gradPosQuery').val());
       console.log($('#gradLocQuery').val());
     });
   }
