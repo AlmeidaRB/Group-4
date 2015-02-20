@@ -34,13 +34,26 @@
 <body>
   <form action="" id='searchForm'>
     <div id='searchInputWrapper'>
-      <input type='text' id='alumQuery' placeholder='Search Alumni'>
-      <input type='text' id='employerQuery' placeholder='Search Employers' class='invis'>
-      <span class='fa fa-chevron-down'></span>
+      <input type='text' class='invis' id='gradPosQuery' placeholder='Position'>
+      <input type='text' class='invis' id='gradLocQuery' placeholder='Location'>
+      <input type='text' class='invis' id='compPosQuery' placeholder='Position'>
+      <input type='text' class='invis' id='compLocQuery' placeholder='Location'>
       <!-- <ul>
         <li><span class='fa fa-check-square-o' id='alumniCheckBox'> Alumni</span></li>
         <li><span class='fa fa-square-o' id='employerCheckBox'> Employers</span></li>
       </ul> -->
+      <select id="gradPosQuery">
+        <option value="allPositions">Position</option>
+        <option value="Front-end">Front-end</option>
+        <option value="Back-end">Back-end</option>
+        <option value="Web-dev">Web Dev</option>
+      </select>
+      <select id="gradLocQuery">
+        <option value="allLocations">Location</option>
+        <option value="Greenville">Greenville, SC</option>
+        <option value="Charleston">Charleston, SC</option>
+        <option value="Atlanta">Atlanta, GA</option>
+      </select>
     </div>
     <button class="btn btn-success">Search</button>
   </form>
