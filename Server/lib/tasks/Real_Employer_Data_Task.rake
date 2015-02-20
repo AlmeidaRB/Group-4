@@ -1,11 +1,11 @@
-task create_employers: :environment do
-  puts "10 employers created"
+task create_real_employers: :environment do
+  puts "10 employers created, booyah!"
     Employer.create!({
       name: 'BenefitFocus',
       photo: 'http://www.mitcio.com/sites/default/files/imagecache/gold_sponsor/benefitfocus.jpg',
       bio: 'Benefitfocus is a leading provider of benefits technology. More than 23 million consumers manage all types of benefits in the Benefitfocus Cloud. By delivering technology that integrates all benefits in one place, Benefitfocus provides a better way to engage consumers, educate employees and simplify benefit enrollment and management.',
       industry: 'Software Provider',
-      size: '1,200',
+      size: '1200',
       date_founded: '1998',
       email: 'hr@benefitfocus.com',
       location: 'Charleston, SC'
@@ -22,7 +22,8 @@ task create_employers: :environment do
     })
     Employer.create!({
       name: 'CreateSpace',
-      photo: 'The publishing industry is evolving. Hundreds of thousands of authors like you are publishing profitable work right now instead of waiting for agents and publishers to give the green light.
+      photo: 'http://scribeworks.ca/wp-content/uploads/2011/04/CreateSpace-Logo.jpg',
+      bio: 'The publishing industry is evolving. Hundreds of thousands of authors like you are publishing profitable work right now instead of waiting for agents and publishers to give the green light.
         With CreateSpace you can easily access tools, quality printing, booksellers, eBook distribution, and marketing strategies so that you can generate more opportunities than you imagined – all while building your following of readers.',
       industry: 'On-Demand Publishing',
       size: '350',
@@ -55,7 +56,7 @@ task create_employers: :environment do
       photo: 'http://img1.wikia.nocookie.net/__cb20100717060808/logopedia/images/a/a9/Mcdonalds-90s-logo.svg',
       bio: 'The McDonalds Corporation is the largest chain of hamburger fast food restaurants in the world, serving around 68 million customers daily in 119 countries across 35,000 outlets.  Headquartered in the United States, the company began in 1940 as a barbecue restaurant operated by Richard and Maurice McDonald.  In 1948, they reorganized their business as a hamburger stand using production line principles. Businessman Ray Kroc joined the company as a franchise agent in 1955. He subsequently purchased the chain from the McDonald brothers and oversaw its worldwide growth.',
       industry: 'Fast Food Provider',
-      size: '450,000',
+      size: '450000',
       date_founded: '1956',
       email: 'hr@mcd.com',
       location: 'Charleston, SC'
@@ -96,7 +97,7 @@ task create_employers: :environment do
       photo: 'http://halsey.cofc.edu/wp-content/files_mf/cache/th_786a15f2a09f58bf421d59fa1c1c028e_screenshot20130920at2.43.03pm.png',
       bio: 'Blackbaud Inc. is a supplier of software and services specifically designed for nonprofit organizations. Its products focus on fundraising, website management, CRM, analytics, financial management, ticketing, and education administration.',
       industry: 'Software Provider',
-      size: '2,600',
+      size: '2600',
       date_founded: '1981',
       email: 'hr@blackbaud.com',
       location: 'Charleston, SC'
