@@ -8,11 +8,15 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :graduates do
-    member do
+    collection do
       get :search_graduates
     end
   end
-  resources :employers
+  resources :employers do 
+    collection do
+      get :search_employers
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

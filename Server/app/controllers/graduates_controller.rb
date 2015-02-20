@@ -13,6 +13,19 @@ class GraduatesController < ApplicationController
   end
 
   def search_graduates
+    @jsonarray = []
+      params[:state_search] = '' if params[:state_search] == "all"
+      params[:city_search] = '' if params[:city_search] == "all"
+      params[:position_search] = '' if params[:position_search] == "all"
+      @graduates = Graduate.where("current_city LIKE ? AND current_state LIKE ? OR desired_position LIKE ?", "%#{params[:city_search]}%", "%#{params[:state_search]}%", "%#{params[:position_search]}")
+    @graduates.each do |g|
+      grad = g.as_json(include: 
+        [:links.as_json, :experiences.as_json, :skills.as_json, :educations.as_json => {:include => [:degrees]}])
+      @jsonarray.push(grad)
+    end
+    respond_to do |format|
+      format.json { render json: @jsonarray }
+    end
   end
 
   def show
