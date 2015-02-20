@@ -1,5 +1,10 @@
+@import "_variables";
+
+.invis{
+  display:none;
+}
 *{
-  font-family:'Open Sans';
+  font-family:$mainFont;
 }
 body{
   background:url('http://tech.co/wp-content/uploads/2013/02/TheIronYard.jpg');
@@ -7,45 +12,114 @@ body{
   background-size:cover;
   background-attachment: fixed;
 }
-section{
-  background-color:rgba(116, 125, 132, 0.9);
-  padding-top:30px;
-  margin-top:800px;
-  height:1500px;
-}
-/* .card{
-  width:300px;
-  height:500px;
-  border-radius:25px;
-  margin: 50px 6%;
-  box-shadow: 5px 5px 2.5px 0px rgba(0,0,0,0.75);
-  background-color:white;
-  text-align:center;
-  float:left;
-  .btn{
-    margin-right:30px;
-    margin-left:30px;
-    margin-top:25px;
+#searchForm{
+  z-index:99999;
+  width:80%;
+  margin:auto;
+  position:fixed;
+  top:5px;
+  left: 50%;
+  margin-left:-40%;
+  #searchInputWrapper{
+    border-radius:4px;
+    width:90%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:white;
+  }
+  input{
+    font-size:2em;
+    width:88%;
+    border:none;
+    &:focus{
+      outline:none;
+    }
+  }
+  .fa-chevron-down{
+    font-size:2em;
+    transform:scale
+  }
+/*   ul{
+  padding:0;
+  margin:0;
+  display:inline-block;
+  li{
+    list-style-type:none;
+    &:hover{
+      cursor:pointer;
+    }
   }
 } */
-img{
-  border-top-right-radius:25px;
-  border-top-left-radius:25px;
+  .btn{
+    font-size:1.5em;
+    height:45px;
+    width:9%;
+    position:absolute;
+    top:0;
+    right:0;
+  }
+}
+section{
+  background-color:$cardsWrapperBG;
+  padding-top:30px;
+  margin-top:100vh;
+  overflow:hidden;
+}
+.bxslider{
+  height:100%;
+  .alumPhoto{
+    width:100%;
+    height:300px;
+  }
+  li{
+    height:100%;
+  }
+  ul{
+    padding:0;
+    li{
+      list-style-type:none;
+    }
+  }
+  p,h2,span,ul{
+    margin-left:12px;
+  }
+  .alumName{
+    font-weight:bold;
+    font-style:italic;
+    font-family:$headingFont;
+  }
+  .btn-success{
+    position:absolute;
+    bottom:20px;
+    left:40px;
+  }
+  .btn-primary{
+    position:absolute;
+    width:82px;
+    bottom:20px;
+    right:40px;
+  }
 }
 .bx-wrapper{
-
+  width:33.33%;
+  //border:1px solid blue!important;
   float:left;
-  text-align:center;
-  //background-color:blue;
-  margin-left:150px;
-  padding:0;
-  border:1px solid blue!important;
-}
-.bx-viewport{
-  width:300px;
-  height:500px;
-  border-radius:25px;
-  padding:0;
-  border:1px solid red!important;
-  position:initial;
+  .bx-viewport{
+    width:300px!important;
+    height:500px!important;
+    margin:auto;
+    border-radius:25px;
+    text-align:left;
+    border:0;
+    //border:1px solid red!important;
+    position:static!important;
+    background-color:$cardBG;
+  }
+  .bx-prev{
+    left:10%;
+  }
+  .bx-next{
+    right:10%;
+  }
 }
