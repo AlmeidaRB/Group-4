@@ -30,22 +30,24 @@ var methods = {
 
   },
   initEvents: function () {
-    //toggle searching alumni/employers
-    $('#alumniCheckBox').on('click', function () {
-      $('#alumQuery').removeClass('invis');
-      $('#employerQuery').addClass('invis');
-      $('#alumniCheckBox').removeClass('fa-square-o');
-      $('#employerCheckBox').addClass('fa-square-o');
-      $('#alumniCheckBox').addClass('fa-check-square-o');
-      $('#employerCheckBox').removeClass('fa-check-square-o');
-    });
-    $('#employerCheckBox').on('click', function () {
-      $('#employerQuery').removeClass('invis');
-      $('#alumQuery').addClass('invis');
-      $('#employerCheckBox').removeClass('fa-square-o');
-      $('#alumniCheckBox').addClass('fa-square-o');
-      $('#employerCheckBox').addClass('fa-check-square-o');
-      $('#alumniCheckBox').removeClass('fa-check-square-o');
+    //send
+    $('#searchForm').on('submit', function (e) {
+      e.preventDefault();
+    //   $.ajax({
+    //   url:,
+    //   type:'GET',
+    //   data:{
+    //
+    //   },
+    //   success:function(){
+    //     console.log('ajax success');
+    //   },
+    //   error:function(error){
+    //     console.log('ajax error');
+    //   }
+    // });
+      console.log($('#gradPosQuery').val());
+      console.log($('#gradLocQuery').val());
     });
   }
 }
