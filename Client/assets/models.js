@@ -1,50 +1,72 @@
 var AlumniModel = Backbone.Model.extend({
-  urlRoot: 'http://10.0.10.95:3000/graduates.json',
+  urlRoot: 'http://localhost:9000/graduates.json',
   defaults: function () {
     return {
-      // first_name: '',
-      // last_name: '',
-      // photo: '',
-      // title: '',
-      // bio: '',
-      // skills: [''],
-      // education: [
-      //   {
-      //     school: '',
-      //     degree: [
-      //       {
-      //         degreeType: '',
-      //         degreeConcentration: '',
-      //         years: {
-      //           startYear: '',
-      //           endYear: ''
-      //         }
-      //       }
-      //     ]
-      //   }
-      // ],
-      // experience: [
-      //   {
-      //     company: '',
-      //     position: '',
-      //     description: '',
-      //     years: {
-      //       startYear: '',
-      //       endYear: ''
-      //     }
-      //   }
-      // ],
-      // gradTIY: {
-      //   city: '',
-      //   state: '',
-      //   gradDate: ''
-      // },
-      // currentLocation: {
-      //   city: '',
-      //   state: ''
-      // },
-      // portfolioURL: '',
-      // email: ''
+      id:0,
+      photo:'',
+      bio:'',
+      current_city:'',
+      current_state:'',
+      grad_city:'',
+      grad_state:'',
+      email:'',
+      grad_date:'',
+      created_at:'',
+      updated_at:'',
+      first_name:'',
+      last_name:'',
+      links:[
+        {
+          graduate_id:0,
+          id:0,
+          url:'',
+          description:'',
+          created_at:'',
+          updated_at:''
+        }
+      ],
+      experiences:[
+        {
+          graduate_id:0,
+          id:0,
+          company:'',
+          description:'',
+          position:'',
+          start_date:'',
+          end_date:'',
+          created_at:'',
+          updated_at:''
+        }
+      ],
+      skills:[
+        {
+          id:0,
+          skill:'',
+          created_at:'',
+          updated_at:''
+        }
+      ],
+      educations:[
+        {
+          graduate_id:0,
+          id:0,
+          school_name:'',
+          created_at:'',
+          updated_at:'',
+          degrees:[
+            {
+              education_id:0,
+              id:0,
+              start_date:0,
+              end_date:'',
+              concentration:'',
+              created_at:'',
+              updated_at:'',
+              degree_type:''
+            }
+          ]
+        }
+      ]
     };
   },
   initialize: function () {
