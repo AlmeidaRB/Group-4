@@ -2,13 +2,17 @@
   display: none; }
 
 * {
-  font-family: 'Open Sans', serif; }
+  font-family: "Open Sans", serif; }
 
 body {
-  background: url('http://tech.co/wp-content/uploads/2013/02/TheIronYard.jpg');
+  background-image: url("../images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 8px;
+  margin: 8px; }
 
 #searchForm {
   z-index: 99999;
@@ -19,16 +23,16 @@ body {
   left: 50%;
   margin-left: -40%;
   /*   ul{
-  padding:0;
-  margin:0;
-  display:inline-block;
-  li{
-    list-style-type:none;
-    &:hover{
-      cursor:pointer;
+    padding:0;
+    margin:0;
+    display:inline-block;
+    li{
+      list-style-type:none;
+      &:hover{
+        cursor:pointer;
+      }
     }
-  }
-} */ }
+  } */ }
   #searchForm #searchInputWrapper {
     border-radius: 4px;
     width: 90%;
@@ -64,6 +68,11 @@ section {
   .bxslider .alumPhoto {
     width: 100%;
     height: 300px; }
+  .bxslider .employerPhoto {
+    width: 100%;
+    height: 250px;
+    margin: 0px;
+    padding: 0px; }
   .bxslider li {
     height: 100%; }
   .bxslider ul {
@@ -75,7 +84,7 @@ section {
   .bxslider .alumName {
     font-weight: bold;
     font-style: italic;
-    font-family: 'Bitter', serif; }
+    font-family: "Bitter", serif; }
   .bxslider .btn-success {
     position: absolute;
     bottom: 20px;
@@ -102,3 +111,5 @@ section {
     left: 10%; }
   .bx-wrapper .bx-next {
     right: 10%; }
+
+/*# sourceMappingURL=style.css.map */

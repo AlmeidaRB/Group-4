@@ -11,6 +11,9 @@
   <link href="/assets/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
   <link rel='stylesheet' href='assets/style.css'/>
 
+<!--GRADUATE TEMPLATE-->
+
+
   <script type='text/template' id='alumniTmpl'>
 
     <li>
@@ -30,67 +33,44 @@
 
   </script>
 
-  <!--EMPLOYER TEMPLATE-->
-  
+<!--EMPLOYER TEMPLATE-->
+
   <script type='text/template' id='employerTmpl'>
 
-  <li>
-  <img class='employerPhoto' src=<%= photo %> alt='Image could not be found'>
-  <h2 class='employerName'><%= name%></h2>
-    <ul>
-      <li><%= industry%></li>
-      <li><%= location%></li>
-    </ul>
-  </li>
-  <li>
-    <h2><%= date_founded%> <%= size%></h2>
-    <p><%= bio%></p>
-  </li>
+    <li>
+    <img class='employerPhoto' src=<%= photo %> alt='Image could not be found'>
+    <h2 class='employerName'><%= name%></h2>
+      <ul>
+        <li><%= industry%></li>
+        <li><%= location%></li>
+      </ul>
+    </li>
+    <li>
+      <h4>Read About Our Company:</h4>
+      <p><%= bio%></p>
+    </li>
+    <li>
+      <h4>Date Founded:</h4>
+      <p><%= date_founded%></p>
+      <h4>Company Size:</h4>
+      <p><%= size%></p>
+      <h4>Contact:</h4>
+      <p>Click <a href="mailto:<%= email%>">here</a> to send us an email.</a></p>
+    </li>
 
-  <button class="btn btn-success">Portfolio</button>
-  <button class="btn btn-primary">Contact</button>
-
-
-<!--name, photo, bio, industry, date_founded, email, size, contact email, location-->
-
-</script>
+  </script>
 
 </head>
 <body>
   <form action="" id='searchForm'>
     <div id='searchInputWrapper'>
-<!--       <input type='text' class='invis' id='gradPosQuery' placeholder='Position'>
-<input type='text' class='invis' id='gradLocQuery' placeholder='Location'>
-<input type='text' class='invis' id='compPosQuery' placeholder='Position'>
-<input type='text' class='invis' id='compLocQuery' placeholder='Location'> -->
+      <input type='text' id='alumQuery' placeholder='Search Alumni'>
+      <input type='text' id='employerQuery' placeholder='Search Employers' class='invis'>
+      <span class='fa fa-chevron-down'></span>
       <!-- <ul>
         <li><span class='fa fa-check-square-o' id='alumniCheckBox'> Alumni</span></li>
         <li><span class='fa fa-square-o' id='employerCheckBox'> Employers</span></li>
       </ul> -->
-      <select id="gradPosQuery">
-        <option value="allPositions">Position</option>
-        <option value="Front-end">Front-end Engineering</option>
-        <option value="railsEngineering">Rails Engineering</option>
-        <option value="pythonEngineering">Python Engineering</option>
-        <option value="webDesign">Web Design</option>
-        <option value="mobileEngineering">Mobile Engineering</option>
-      </select>
-      <select id="gradLocQuery">
-        <option value="allLocations">Location</option>
-        <option value="atlantaGA">Atlanta, GA</option>
-        <option value="austinTX">Austin, TX</option>
-        <option value="charlestonSC">Charleston, SC</option>
-        <option value="greenvilleSC">Greenville, SC</option>
-
-
-        <option value="AtlantaGA">Atlanta, GA</option>
-        <option value="AtlantaGA">Atlanta, GA</option>
-        <option value="AtlantaGA">Atlanta, GA</option>
-        <option value="AtlantaGA">Atlanta, GA</option>
-        <option value="AtlantaGA">Atlanta, GA</option>
-        <option value="AtlantaGA">Atlanta, GA</option>
-        <option value="AtlantaGA">Atlanta, GA</option>
-      </select>
     </div>
     <button class="btn btn-success">Search</button>
   </form>
