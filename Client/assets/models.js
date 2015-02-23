@@ -1,7 +1,7 @@
 //ALUMNI MODEL
 
 var AlumniModel = Backbone.Model.extend({
-  urlRoot: 'http://localhost:9000/graduates.json',
+  urlRoot: 'https://frozen-basin-2630.herokuapp.com/graduates.json',
   defaults: function () {
     return {
       id:0,
@@ -79,7 +79,7 @@ var AlumniModel = Backbone.Model.extend({
 //EMPLOYER MODEL
 
 var EmployerModel = Backbone.Model.extend({
-  urlRoot: 'http://localhost:9000/employers.json',
+  urlRoot: 'https://frozen-basin-2630.herokuapp.com/employers.json',
   defaults: function () {
     return {
       id:0,
