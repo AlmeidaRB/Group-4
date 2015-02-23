@@ -7,10 +7,18 @@
   font-family:$mainFont;
 }
 body{
-  background:url('http://tech.co/wp-content/uploads/2013/02/TheIronYard.jpg');
+  background-image: url('../images/background.png');
   background-repeat:no-repeat;
   background-size:cover;
   background-attachment: fixed;
+}
+
+//GENERAL HEADER/PARAGRAPH PADDING AND MARGINS
+//applies to all but used for employer cards
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 8px;
+  margin: 8px;
 }
 #searchForm{
   z-index:99999;
@@ -71,6 +79,12 @@ section{
   .alumPhoto{
     width:100%;
     height:300px;
+  }
+  .employerPhoto{
+    width:100%;
+    height: 250px;
+    margin: 0px;
+    padding: 0px;
   }
   li{
     height:100%;

@@ -1,4 +1,4 @@
-class EmployersController < ApplicationController
+class EmployerController < ApplicationController
   def index
     @employers = Employer.all
     respond_to do |format|
