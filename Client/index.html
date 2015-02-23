@@ -11,7 +11,8 @@
   <link href="/assets/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
   <link rel='stylesheet' href='assets/style.css'/>
 
-  <!-- ALUMNI TEMPLATE -->
+
+<!--GRADUATE TEMPLATE-->
 
   <script type='text/template' id='alumniTmpl'>
 
@@ -38,29 +39,36 @@
 
   </script>
 
-  <!--EMPLOYER TEMPLATE-->
+<!--EMPLOYER TEMPLATE-->
 
   <script type='text/template' id='employerTmpl'>
 
     <li>
-    <img class='alumPhoto' src=<%= photo %> alt='Image could not be found'>
-    <h2 class='alumName'><%= name %></h2>
+    <img class='employerPhoto' src=<%= photo %> alt='Image could not be found'>
+    <h2 class='employerName'><%= name%></h2>
       <ul>
-        <li><p>Industry: <%= industry %></p></li>
-        <li><p>Location: <%= location %></p></li>
-        <li><p>Positions available: <%= desired_position %></p></li>
+        <li><%= industry%></li>
+        <li><%= location%></li>
       </ul>
     </li>
     <li>
-      <h3>Company Bio:</h3>
-      <p><%= bio %></p>
+      <h4>Read About Our Company:</h4>
+      <p><%= bio%></p>
     </li>
-
+    <li>
+      <h4>Date Founded:</h4>
+      <p><%= date_founded%></p>
+      <h4>Company Size:</h4>
+      <p><%= size%></p>
+      <h4>Contact:</h4>
+      <p>Click <a href="mailto:<%= email%>">here</a> to send us an email.</a></p>
+    </li>
 
   </script>
 
 </head>
 <body>
+
   <div id="searchWrapper">
     <form action="" id='searchForm'>
       <ul>
@@ -127,7 +135,6 @@
       <button id="searchEmployers" class="btn btn-success invis toggleThis">Search Employers</button>
     </form>
   </div>
-
 
   <section>
     <!-- cards inserted here -->

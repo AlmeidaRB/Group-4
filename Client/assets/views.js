@@ -1,4 +1,5 @@
-//Alumni
+//ALUMNI
+
 //Model View
 
 var AlumniView = Backbone.View.extend({
@@ -24,7 +25,6 @@ var CollectionView = Backbone.View.extend({
   el: $('section'),
   initialize: function () {
     console.log('CollectionView initialized');
-
     this.addAll();
   },
   events: {
