@@ -11,20 +11,29 @@
   <link href="/assets/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
   <link rel='stylesheet' href='assets/style.css'/>
 
+  <!-- ALUMNI TEMPLATE -->
+
   <script type='text/template' id='alumniTmpl'>
 
     <li>
       <img class='alumPhoto' src=<%= photo %> alt='Image could not be found'>
       <h2 class='alumName'><%= first_name%> <%= last_name%></h2>
       <ul>
-        <li>TitlePlaceholder</li>
-        <li><%=  current_city%>, <%= current_state%></li>
+        <li><%= desired_position %></li>
+        <li><%=  current_city %>, <%= current_state %></li>
       </ul>
       <button class="btn btn-success">Portfolio</button>
       <button class="btn btn-primary">Contact</button>
     </li>
     <li>
+      <h3>About Me:</h3>
       <p><%= bio %></p>
+    </li>
+    <li>
+      <h3>Iron Yard Experience</h3>
+      <h4>Graduation location: <%= grad_city %></h4>
+      <h4>Graduation date: <%= grad_date %></h4>
+
     </li>
 
   </script>
@@ -33,63 +42,95 @@
 
   <script type='text/template' id='employerTmpl'>
 
-  <li>
-  <img class='employerPhoto' src=<%= photo %> alt='Image could not be found'>
-  <h2 class='employerName'><%= name%></h2>
-    <ul>
-      <li><%= industry%></li>
-      <li><%= location%></li>
-    </ul>
-  </li>
-  <li>
-    <h2><%= date_founded%> <%= size%></h2>
-    <p><%= bio%></p>
-  </li>
-
-  <button class="btn btn-success">Portfolio</button>
-  <button class="btn btn-primary">Contact</button>
+    <li>
+    <img class='alumPhoto' src=<%= photo %> alt='Image could not be found'>
+    <h2 class='alumName'><%= name %></h2>
+      <ul>
+        <li><p>Industry: <%= industry %></p></li>
+        <li><p>Location: <%= location %></p></li>
+        <li><p>Positions available: <%= desired_position %></p></li>
+      </ul>
+    </li>
+    <li>
+      <h3>Company Bio:</h3>
+      <p><%= bio %></p>
+    </li>
 
 
-<!--name, photo, bio, industry, date_founded, email, size, contact email, location-->
-
-</script>
+  </script>
 
 </head>
 <body>
-  <div id='searchInputWrapper'>
+  <div id="searchWrapper">
     <form action="" id='searchForm'>
-      <select id="gradPosQuery">
-        <option value="allPositions">Position</option>
+      <ul>
+        <li><span class='fa fa-check-square-o' id='graduateCheckBox'> Search Graduates</span></li>
+        <li><span class='fa fa-square-o' id='employerCheckBox'> Search Employers</span></li>
+      </ul>
+      <select id="gradPosQuery" class="toggleThis">
+        <option value="allPositions">Select Title</option>
+        <option value="allPositions">All Title</option>
         <option value="Front-end Engineering">Front-end Engineering</option>
         <option value="Rails Engineering">Rails Engineering</option>
         <option value="Python Engineering">Python Engineering</option>
         <option value="Web Design">Web Design</option>
         <option value="Mobile Engineering">Mobile Engineering</option>
       </select>
-      <select id="gradLocQuery">
-        <option value="allLocations">Location</option>
+      <select id="gradLocQuery" class="toggleThis">
+        <option value="allLocations">Select Location</option>
+        <option value="allLocations">All Locations</option>
+        <option value="Atlanta">Atlanta, GA</option>
+        <option value="Austin">Austin, TX</option>
+        <option value="Charleston">Charleston, SC</option>
+        <option value="Columbia">Columbia, SC</option>
+        <option value="Greenville">Greenville, SC</option>
+        <option value="Houston">Houston, TX</option>
+        <option value="Indianapolis">Indianapolis, IN</option>
+        <option value="Las Vegas">Las Vegas, NV</option>
+        <option value="Little Rock">Little Rock, AK</option>
+        <option value="Nashville">Nashville, TN</option>
+        <option value="Orlando">Orlando, FL</option>
+        <option value="Raleigh-Durham">Raleigh-Durham, NC</option>
+        <option value="Spartenburg">Spartenburg, SC</option>
+        <option value="Tampa St. Petersburg">Tampa-St. Petersburg, NV</option>
+        <option value="Washington D.C.">Washington, D.C.</option>
+      </select>
+      <select class='invis toggleThis' id="emplPosQuery">
+        <option value="allPositions">Select Position</option>
+        <option value="allPositions">All Positions</option>
+        <option value="Front-end Engineering">Front-end Engineering</option>
+        <option value="Rails Engineering">Rails Engineering</option>
+        <option value="Python Engineering">Python Engineering</option>
+        <option value="Web Design">Web Design</option>
+        <option value="Mobile Engineering">Mobile Engineering</option>
+      </select>
+      <select class='invis toggleThis' id="emplLocQuery">
+        <option value="allLocations">Select Location</option>
+        <option value="allLocations">All Locations</option>
         <option value="atlanta">Atlanta, GA</option>
         <option value="austin">Austin, TX</option>
         <option value="charleston">Charleston, SC</option>
         <option value="columbia">Columbia, SC</option>
         <option value="greenville">Greenville, SC</option>
         <option value="houston">Houston, TX</option>
-        <option value="Indianapolis">Indianapolis, IN</option>
+        <option value="indianapolis">Indianapolis, IN</option>
         <option value="lasVegas">Las Vegas, NV</option>
-        <option value="Atlanta">Atlanta, GA</option>
-        <option value="Atlanta">Atlanta, GA</option>
-        <option value="Atlanta">Atlanta, GA</option>
-        <option value="Atlanta">Atlanta, GA</option>
+        <option value="littleRock">Little Rock, AK</option>
+        <option value="nashville">Nashville, TN</option>
+        <option value="orlando">Orlando, FL</option>
+        <option value="raleighDurham">Raleigh-Durham, NC</option>
+        <option value="spartenburg">Spartenburg, SC</option>
+        <option value="tampaPetersburg">Tampa-St. Petersburg, NV</option>
+        <option value="washingtonDC">Washington, D.C.</option>
       </select>
-      <ul>
-        <li><span class='fa fa-check-square-o' id='alumniCheckBox'> Alumni</span></li>
-        <li><span class='fa fa-square-o' id='employerCheckBox'> Employers</span></li>
-      </ul>
-    </div>
-    <button class="btn btn-success">Search</button>
-  </form>
+      <button id="searchGraduates" class="btn btn-success toggleThis">Search Graduates</button>
+      <button id="searchEmployers" class="btn btn-success invis toggleThis">Search Employers</button>
+    </form>
+  </div>
+
+
   <section>
-    <!-- user cards inserted here -->
+    <!-- cards inserted here -->
   </section>
   <script src='bower_components/jquery/dist/jquery.js'></script>
   <script src='bower_components/underscore/underscore.js'></script>
@@ -100,6 +141,7 @@
   <script src='assets/models.js'></script>
   <script src='assets/collections.js'></script>
   <script src='assets/views.js'></script>
+  <script src='assets/routes.js'></script>
   <script src='assets/main.js'></script>
 </body>
 </html>

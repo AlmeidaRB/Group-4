@@ -7,7 +7,6 @@ var AlumniView = Backbone.View.extend({
   className: 'bxslider',
   initialize: function () {
     console.log('AlumniView initialized');
-    console.log(this.el);
   },
   events: {
 
@@ -37,7 +36,7 @@ var CollectionView = Backbone.View.extend({
   },
   addAll: function () {
     _.each(this.collection.models, this.addOne, this);
-    
+    $('.bxslider').bxSlider();//initializes slider plugin
   }
 });
 
@@ -51,7 +50,6 @@ var EmployerView = Backbone.View.extend({
   className: 'bxslider',
   initialize: function () {
     console.log('EmployerView initialized');
-    console.log(this.el);
   },
   events: {
 
@@ -80,6 +78,6 @@ var CollectionView2 = Backbone.View.extend({
   },
   addAll: function () {
     _.each(this.collection.models, this.addOne, this);
-    $('.bxslider').bxSlider();
+    $('.bxslider').bxSlider();//initializes slider plugin
   }
 });

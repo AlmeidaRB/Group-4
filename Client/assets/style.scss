@@ -1,5 +1,6 @@
 @import "_variables";
 
+
 .invis{
   display:none;
 }
@@ -7,59 +8,67 @@
   font-family:$mainFont;
 }
 body{
-  background:url('http://tech.co/wp-content/uploads/2013/02/TheIronYard.jpg');
+  background:linear-gradient( to left top, $mainBGColor, $mainBGColor), url('http://tech.co/wp-content/uploads/2013/02/TheIronYard.jpg');
   background-repeat:no-repeat;
   background-size:cover;
   background-attachment: fixed;
 }
-#searchForm{
-  z-index:99999;
-  width:80%;
-  margin:auto;
+#searchWrapper{
+  width:100%;
+  background-color:$SearchWrapperBG;
   position:fixed;
-  top:5px;
-  left: 50%;
-  margin-left:-40%;
-  #searchInputWrapper{
-    border-radius:4px;
-    width:90%;
-    position:absolute;
-    top:0;
-    left:0;
-    background-color:white;
+  top:0;
+  z-index:99999;
+}
+#searchForm{
+
+  width:51%;
+  margin:auto;
+
+
+
+  padding-left:11px;
+  ul,select{
+    margin:0 15px 0 0;
   }
-  input{
-    font-size:2em;
-    width:88%;
-    border:none;
+  li,select,button{
+    cursor:pointer;
+    &:hover{
+      transform:scale(1.08,1.08);
+    }
+  }
+  ul{
+    padding:0;
+    display:inline-block;
+    position:relative;
+    top:3px;
+    li{
+      list-style-type:none;
+      color:white;
+      span{
+        font-weight:bold;
+      }
+    }
+  }
+  select{
+    -webkit-appearance: none;
+    font-size:14px;
+    padding:6px 12px;
+    position:relative;
+    bottom:6px;
     &:focus{
       outline:none;
     }
   }
-  .fa-chevron-down{
-    font-size:2em;
-    transform:scale
-  }
-/*   ul{
-  padding:0;
-  margin:0;
-  display:inline-block;
-  li{
-    list-style-type:none;
-    &:hover{
-      cursor:pointer;
+  button{
+    position:relative;
+    bottom:7px;
+    &:focus{
+      outline:none;
     }
   }
-} */
-  .btn{
-    font-size:1.5em;
-    height:45px;
-    width:9%;
-    position:absolute;
-    top:0;
-    right:0;
-  }
 }
+
 section{
   background-color:$cardsWrapperBG;
   padding-top:30px;
@@ -81,7 +90,7 @@ section{
       list-style-type:none;
     }
   }
-  p,h2,span,ul{
+  p,h2,h3,h4,span,ul{
     margin-left:12px;
   }
   .alumName{
